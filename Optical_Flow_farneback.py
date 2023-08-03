@@ -8,7 +8,7 @@ x_pos = []
 y_pos = []
 subtracao1 = cv2.createBackgroundSubtractorMOG2() #背景分離 
 subtracao2 = cv2.createBackgroundSubtractorKNN(detectShadows=False)
-filepath = "C:/vscode/MachineVision_final_project"
+filepath = "image/"
 step = 9
 def background_subtractor(filepath):
     for file in os.listdir(filepath):
@@ -45,8 +45,8 @@ def draw(img,disp_x,disp_y):
             y_pos.append(new_y)
             #cv2.line(mask,(9*j+5,9*i+5),(new_x,new_y),(255,255,0),1)
     return mask ,x_pos , y_pos
-frame1 = cv2.imread('basketball1_360x270.bmp')
-frame2 = cv2.imread('basketball2_360x270.bmp')
+frame1 = cv2.imread(os.path.join(filepath,"basketball1_360x270.bmp"))
+frame2 = cv2.imread(os.path.join(filepath,"basketball2_360x270.bmp"))
 # frame1 = cv2.imread('dumptruck1_360x270.bmp')
 # frame2 = cv2.imread('dumptruck2_360x270.bmp')
 #background_subtractor(filepath)

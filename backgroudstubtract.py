@@ -5,8 +5,9 @@ subtractor = cv2.createBackgroundSubtractorMOG2(detectShadows=False)
 subtractor2 = cv2.createBackgroundSubtractorKNN(detectShadows=False)
 # frame1 = cv2.imread('basketball1_360x270.bmp')
 # frame2 = cv2.imread('basketball2_360x270.bmp')
-frame1 = cv2.imread('dumptruck1_360x270.bmp')
-frame2 = cv2.imread('dumptruck2_360x270.bmp')
+
+frame1 = cv2.imread('image/dumptruck1_360x270.bmp')
+frame2 = cv2.imread('image/dumptruck2_360x270.bmp')
 #for erosion and dilation
 kernel = np.ones((3,3), np.uint8)
 step = 9

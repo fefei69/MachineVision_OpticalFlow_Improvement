@@ -1,11 +1,12 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt 
-
+import os
 # frame1 = cv2.imread('dumptruck1_360x270.bmp')
 # frame2 = cv2.imread('dumptruck2_360x270.bmp')
-frame1 = cv2.imread('basketball1_360x270.bmp')
-frame2 = cv2.imread('basketball2_360x270.bmp')
+filepath = "image/"
+frame1 = cv2.imread(os.path.join(filepath,"basketball1_360x270.bmp"))
+frame2 = cv2.imread(os.path.join(filepath,"basketball2_360x270.bmp"))
 prev = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
 next = cv2.cvtColor(frame2, cv2.COLOR_BGR2GRAY)
 img3 = cv2.resize(frame1, (180, 270//2), interpolation=cv2.INTER_AREA)
